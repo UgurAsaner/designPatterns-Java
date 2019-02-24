@@ -8,7 +8,7 @@ if [ $# -eq 0 ]; then
         cd $d
         mkdir build
         find . -name "*.java" -print | xargs javac -d ./build
-        jar cfe ./build/${dir}.jar com.adapter.Main *
+        jar cf ./build/${dir}.jar *
         echo "Building ${dir} Finnished"
         cd ..
     done
